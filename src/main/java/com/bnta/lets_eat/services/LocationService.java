@@ -13,6 +13,7 @@ public class LocationService {
     @Autowired
     LocationRepository locationRepository;
 
+//    this finds locations based on id
     public Location findLocation(Long locationId){
         return locationRepository.findById(locationId).get();
     }
