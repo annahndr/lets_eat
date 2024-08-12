@@ -13,7 +13,7 @@ public enum Cuisine {
     ITALIAN,
     VEGAN,
     VEGETARIAN,
-    MALAY,
+    MALAYSIAN,
     SINGAPOREAN,
     BRITISH,
     SCOTTISH,
@@ -33,6 +33,12 @@ public enum Cuisine {
     MIDDLE_EASTERN,
     KOREAN,
     MEXICAN,
+    SWEET,
+    TURKISH,
+    BRUNCH,
+    PIZZA,
+    BURGERS,
+    MONGOLIAN,
     OTHER
 
 }

@@ -21,7 +21,10 @@ public class RestaurantController {
 
 //    INDEX
     @GetMapping
-    public ResponseEntity<List<Restaurant>> getAllRestaurants(){
+    public ResponseEntity<List<Restaurant>> getAllRestaurants(@RequestParam (required = false) String cuisine){
+        if(cuisine != null) {
+            return new ResponseEntity<>(restaurantService.findByCuisine(cuisine), HttpStatus.FOUND);
+        }
         return new ResponseEntity<>(restaurantService.getAllRestaurants(), HttpStatus.OK);
     }
 
@@ -38,7 +41,6 @@ public class RestaurantController {
         Restaurant newRestaurant = restaurantService.createNewRestaurant(restaurantDTO);
         return new ResponseEntity<>(newRestaurant, HttpStatus.CREATED);
     }
-
 
 //    UPDATE
 }

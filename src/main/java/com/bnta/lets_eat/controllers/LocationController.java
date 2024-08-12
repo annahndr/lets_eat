@@ -19,8 +19,18 @@ public class LocationController {
     @Autowired
     LocationService locationService;
 
+//    INDEX
     @GetMapping
     public ResponseEntity<List<Location>> getAllLocations(){
         return new ResponseEntity<>(locationService.getAllLocations(), HttpStatus.FOUND);
     }
+
+//    SHOW
+
+
+//    CREATE
+
+
+//    UPDATE
+
 }

@@ -38,6 +38,12 @@ public class RestaurantService {
         return newRestaurant;
     }
 
+    public List<Restaurant> findByCuisine(String cuisine){
+        String upperCaseCuisine = cuisine.toUpperCase();
+        Cuisine cuisineEnum = Cuisine.valueOf(upperCaseCuisine);
+        return restaurantRepository.findRestaurantsByCuisinesContaining(cuisineEnum);
+    }
+
 
 
 }
