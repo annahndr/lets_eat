@@ -24,3 +24,61 @@ Considered storing geo location as an array of two values.
 Postgres datatype POINT stores values as `[longitude, latitude]`, whereas most packages require `[latitude, longitude]`. Decided to keep values separate.
 
 ### Sample API
+
+```
+// localhost:8080/restuarants
+
+{
+        "id": 5,
+        "name": "Big Lola's Taqueria",
+        "address": "493 Smithdown Road",
+        "postcode": "L15 5AE",
+        "website": "https://biglolas.co.uk/",
+        "cuisines": [
+            "MEXICAN"
+        ],
+        "location": {
+            "id": 4,
+            "town": "Liverpool",
+            "neighbourhood": "Wavertree"
+        },
+        "latitude": 53.390099848417435,
+        "longitude": -2.9255602025424277
+    },
+    {
+        "id": 6,
+        "name": "Rudy's Pizza",
+        "address": "Peter Street",
+        "postcode": "M2 5QJ",
+        "website": "https://www.rudyspizza.co.uk/pizzerias/peterst",
+        "cuisines": [
+            "PIZZA"
+        ],
+        "location": {
+            "id": 5,
+            "town": "Manchester",
+            "neighbourhood": "City Centre"
+        },
+        "latitude": 53.47842331842055,
+        "longitude": -2.2474895790689655
+    },
+    {
+        "id": 7,
+        "name": "Fargo's",
+        "address": "377 Ladypool Road",
+        "postcode": "B12 8LA",
+        "website": "http://www.fargosfresh.co.uk/",
+        "cuisines": [
+            "PIZZA",
+            "BURGERS"
+        ],
+        "location": {
+            "id": 6,
+            "town": "Birmingham",
+            "neighbourhood": "Balsall Heath"
+        },
+        "latitude": 52.45295183461756,
+        "longitude": -1.8789830376678671
+    }
+
+```
